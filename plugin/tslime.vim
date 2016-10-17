@@ -51,7 +51,7 @@ function! Send_to_Tmux(text)
   " This is my life.  This is computering in 2014.
   for line in split(a:text, '\n\zs' )
     call <SID>set_tmux_buffer(line)
-    call system("tmux paste-buffer -dpt " . target)
+    call system("tmux paste-buffer -dt " . target)
     sleep 2m
   endfor
 endfunction
